@@ -1,0 +1,402 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Isolator:4N25 U?
+U 1 1 5BB940A7
+P 2400 2600
+F 0 "U?" H 2400 2925 50  0000 C CNN
+F 1 "4N25" H 2400 2834 50  0000 C CNN
+F 2 "Package_DIP:DIP-6_W7.62mm" H 2200 2400 50  0001 L CIN
+F 3 "https://www.vishay.com/docs/83725/4n25.pdf" H 2400 2600 50  0001 L CNN
+	1    2400 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HC14 U?
+U 1 1 5BB941B7
+P 3200 2600
+F 0 "U?" H 3200 2917 50  0000 C CNN
+F 1 "74HC14" H 3200 2826 50  0000 C CNN
+F 2 "" H 3200 2600 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74HC14" H 3200 2600 50  0001 C CNN
+	1    3200 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5BB942AA
+P 2850 2050
+F 0 "R?" H 2920 2096 50  0000 L CNN
+F 1 "10k" H 2920 2005 50  0000 L CNN
+F 2 "" V 2780 2050 50  0001 C CNN
+F 3 "~" H 2850 2050 50  0001 C CNN
+	1    2850 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5BB9433C
+P 1800 2500
+F 0 "R?" V 2007 2500 50  0000 C CNN
+F 1 "220" V 1916 2500 50  0000 C CNN
+F 2 "" V 1730 2500 50  0001 C CNN
+F 3 "~" H 1800 2500 50  0001 C CNN
+	1    1800 2500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5BB945F3
+P 2800 2800
+F 0 "#PWR?" H 2800 2550 50  0001 C CNN
+F 1 "GND" H 2805 2627 50  0000 C CNN
+F 2 "" H 2800 2800 50  0001 C CNN
+F 3 "" H 2800 2800 50  0001 C CNN
+	1    2800 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1950 2500 2100 2500
+Wire Wire Line
+	2700 2600 2850 2600
+Wire Wire Line
+	2850 2200 2850 2600
+Connection ~ 2850 2600
+Wire Wire Line
+	2850 2600 2900 2600
+Wire Wire Line
+	2700 2700 2800 2700
+Wire Wire Line
+	2800 2700 2800 2800
+Wire Wire Line
+	1650 2500 1450 2500
+Wire Wire Line
+	2100 2700 1600 2700
+Wire Wire Line
+	3500 2600 3750 2600
+Wire Wire Line
+	2850 1900 2850 1750
+Text Label 1450 2500 0    50   ~ 0
+pwm
+Text Label 2850 1750 0    50   ~ 0
++5V
+Text Label 1600 2700 0    50   ~ 0
+external_gnd
+$Comp
+L Device:R R?
+U 1 1 5BB94CB0
+P 3900 2600
+F 0 "R?" V 3693 2600 50  0000 C CNN
+F 1 "470" V 3784 2600 50  0000 C CNN
+F 2 "" V 3830 2600 50  0001 C CNN
+F 3 "~" H 3900 2600 50  0001 C CNN
+	1    3900 2600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3750 2600 3800 2600
+Connection ~ 3750 2600
+$Comp
+L Transistor_BJT:TIP122 Q?
+U 1 1 5BB94F00
+P 5450 2100
+F 0 "Q?" H 5657 2146 50  0000 L CNN
+F 1 "TIP122" H 5657 2055 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 5650 2025 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 5450 2100 50  0001 L CNN
+	1    5450 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:TIP122 Q?
+U 1 1 5BB94F89
+P 5450 3250
+F 0 "Q?" H 5657 3296 50  0000 L CNN
+F 1 "TIP122" H 5657 3205 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 5650 3175 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 5450 3250 50  0001 L CNN
+	1    5450 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:TIP122 Q?
+U 1 1 5BB95020
+P 7250 2050
+F 0 "Q?" H 7456 2096 50  0000 L CNN
+F 1 "TIP122" H 7456 2005 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 7450 1975 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 7250 2050 50  0001 L CNN
+	1    7250 2050
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:TIP122 Q?
+U 1 1 5BB950A7
+P 7250 3350
+F 0 "Q?" H 7456 3396 50  0000 L CNN
+F 1 "TIP122" H 7456 3305 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 7450 3275 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 7250 3350 50  0001 L CNN
+	1    7250 3350
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:BC337 Q?
+U 1 1 5BB955C9
+P 4500 2600
+F 0 "Q?" H 4691 2646 50  0000 L CNN
+F 1 "BC337" H 4691 2555 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 4700 2525 50  0001 L CIN
+F 3 "http://www.nxp.com/documents/data_sheet/BC817_BC817W_BC337.pdf" H 4500 2600 50  0001 L CNN
+	1    4500 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5BB95797
+P 4600 2150
+F 0 "R?" H 4670 2196 50  0000 L CNN
+F 1 "2200" H 4670 2105 50  0000 L CNN
+F 2 "" V 4530 2150 50  0001 C CNN
+F 3 "~" H 4600 2150 50  0001 C CNN
+	1    4600 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5BB9584B
+P 4600 2950
+F 0 "#PWR?" H 4600 2700 50  0001 C CNN
+F 1 "GND" H 4605 2777 50  0000 C CNN
+F 2 "" H 4600 2950 50  0001 C CNN
+F 3 "" H 4600 2950 50  0001 C CNN
+	1    4600 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5BB9588A
+P 6300 3600
+F 0 "#PWR?" H 6300 3350 50  0001 C CNN
+F 1 "GND" H 6305 3427 50  0000 C CNN
+F 2 "" H 6300 3600 50  0001 C CNN
+F 3 "" H 6300 3600 50  0001 C CNN
+	1    6300 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 2600 4300 2600
+Wire Wire Line
+	4600 2950 4600 2800
+$Comp
+L Device:R R?
+U 1 1 5BB960F4
+P 5000 2750
+F 0 "R?" H 5070 2796 50  0000 L CNN
+F 1 "47000" H 5070 2705 50  0000 L CNN
+F 2 "" V 4930 2750 50  0001 C CNN
+F 3 "~" H 5000 2750 50  0001 C CNN
+	1    5000 2750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5150 2750 5150 3250
+Wire Wire Line
+	5150 3250 5250 3250
+Wire Wire Line
+	4600 2300 4600 2400
+Wire Wire Line
+	4850 2750 4850 2400
+Wire Wire Line
+	4850 2400 4600 2400
+Connection ~ 4600 2400
+Wire Wire Line
+	5150 2750 5150 2100
+Wire Wire Line
+	5150 2100 5250 2100
+Connection ~ 5150 2750
+Wire Wire Line
+	5550 1900 5550 1850
+Wire Wire Line
+	7150 1900 7150 1850
+Wire Wire Line
+	5550 2300 5550 2450
+Wire Wire Line
+	5550 2300 5550 2250
+Connection ~ 5550 2300
+Wire Wire Line
+	5550 1550 6350 1550
+Connection ~ 7150 1850
+Wire Wire Line
+	7150 1850 7150 1550
+Wire Wire Line
+	7150 2250 7150 2450
+Wire Wire Line
+	4850 2750 4850 3850
+Wire Wire Line
+	4850 3850 7550 3850
+Connection ~ 4850 2750
+$Comp
+L Device:R R?
+U 1 1 5BB9AD84
+P 7550 3550
+F 0 "R?" H 7620 3596 50  0000 L CNN
+F 1 "47000" H 7620 3505 50  0000 L CNN
+F 2 "" V 7480 3550 50  0001 C CNN
+F 3 "~" H 7550 3550 50  0001 C CNN
+	1    7550 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7550 3850 7550 3700
+Wire Wire Line
+	7550 3400 7550 3350
+Wire Wire Line
+	7550 3350 7450 3350
+Wire Wire Line
+	7550 3350 7550 2050
+Wire Wire Line
+	7550 2050 7450 2050
+Connection ~ 7550 3350
+Wire Wire Line
+	6350 1550 6350 1400
+Connection ~ 6350 1550
+Wire Wire Line
+	6350 1550 7150 1550
+Text Label 6350 1400 0    50   ~ 0
++27V
+$Comp
+L Diode:1N4148 D?
+U 1 1 5BB9C43F
+P 6000 2100
+F 0 "D?" H 6000 2316 50  0000 C CNN
+F 1 "1N4148" H 6000 2225 50  0000 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 6000 1925 50  0001 C CNN
+F 3 "http://www.nxp.com/documents/data_sheet/1N4148_1N4448.pdf" H 6000 2100 50  0001 C CNN
+	1    6000 2100
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148 D?
+U 1 1 5BB9E4FF
+P 6650 2100
+F 0 "D?" H 6650 2316 50  0000 C CNN
+F 1 "1N4148" H 6650 2225 50  0000 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 6650 1925 50  0001 C CNN
+F 3 "http://www.nxp.com/documents/data_sheet/1N4148_1N4448.pdf" H 6650 2100 50  0001 C CNN
+	1    6650 2100
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148 D?
+U 1 1 5BB9E9D0
+P 6000 3300
+F 0 "D?" H 6000 3516 50  0000 C CNN
+F 1 "1N4148" H 6000 3425 50  0000 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 6000 3125 50  0001 C CNN
+F 3 "http://www.nxp.com/documents/data_sheet/1N4148_1N4448.pdf" H 6000 3300 50  0001 C CNN
+	1    6000 3300
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148 D?
+U 1 1 5BB9EEA9
+P 6600 3300
+F 0 "D?" H 6600 3516 50  0000 C CNN
+F 1 "1N4148" H 6600 3425 50  0000 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 6600 3125 50  0001 C CNN
+F 3 "http://www.nxp.com/documents/data_sheet/1N4148_1N4448.pdf" H 6600 3300 50  0001 C CNN
+	1    6600 3300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6000 3150 6000 2950
+Wire Wire Line
+	6000 2950 5550 2950
+Connection ~ 5550 2950
+Wire Wire Line
+	5550 2950 5550 3050
+Wire Wire Line
+	5550 3450 5550 3600
+Wire Wire Line
+	5550 3600 6000 3600
+Wire Wire Line
+	6300 3600 6600 3600
+Wire Wire Line
+	7150 3600 7150 3550
+Connection ~ 6300 3600
+Wire Wire Line
+	6000 3450 6000 3600
+Connection ~ 6000 3600
+Wire Wire Line
+	6000 3600 6300 3600
+Wire Wire Line
+	6600 3450 6600 3600
+Connection ~ 6600 3600
+Wire Wire Line
+	6600 3600 7150 3600
+Wire Wire Line
+	6600 3150 6600 2950
+Wire Wire Line
+	6600 2950 7150 2950
+Connection ~ 7150 2950
+Wire Wire Line
+	7150 2950 7150 3150
+Wire Wire Line
+	6000 1950 6000 1850
+Wire Wire Line
+	6000 1850 5550 1850
+Connection ~ 5550 1850
+Wire Wire Line
+	5550 1850 5550 1550
+Wire Wire Line
+	6000 2250 6000 2450
+Wire Wire Line
+	6000 2450 5550 2450
+Connection ~ 5550 2450
+Wire Wire Line
+	5550 2450 5550 2700
+Wire Wire Line
+	6650 1950 6650 1850
+Wire Wire Line
+	6650 1850 7150 1850
+Wire Wire Line
+	6650 2250 6650 2450
+Wire Wire Line
+	6650 2450 7150 2450
+Connection ~ 7150 2450
+Wire Wire Line
+	7150 2450 7150 2700
+Wire Wire Line
+	5550 2700 5850 2700
+Connection ~ 5550 2700
+Wire Wire Line
+	5550 2700 5550 2950
+Wire Wire Line
+	7150 2700 6800 2700
+Connection ~ 7150 2700
+Wire Wire Line
+	7150 2700 7150 2950
+Text Label 5850 2700 0    50   ~ 0
+SAIDA+
+Text Label 6800 2700 0    50   ~ 0
+SAIDA-
+Wire Wire Line
+	4600 2000 4600 1550
+Wire Wire Line
+	4600 1550 5550 1550
+Connection ~ 5550 1550
+$EndSCHEMATC
