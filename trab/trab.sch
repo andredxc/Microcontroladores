@@ -683,4 +683,10 @@ Wire Wire Line
 	10400 2800 10650 2800
 Text Label 10650 2800 0    50   ~ 0
 INDEX_1
+Text Notes 7100 6700 0    79   ~ 0
+André D. Carneiro, Camilla S. Schmidt e Henrique E. Pchara
+Text Notes 8150 7650 0    50   ~ 0
+10/10/2018
+Text Notes 7400 7500 0    50   ~ 0
+Esquemático do projeto final
 $EndSCHEMATC
