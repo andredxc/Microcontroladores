@@ -1,5 +1,5 @@
 TARGET=trab
-SRCS=main.c
+SRCS=testGPIO.c
 
 FLAGS=-O2 -Wall -g -MMD
 INCLUDE=-I./lib
