@@ -34,7 +34,8 @@ case "$1" in
         if [ ! -d /sys/class/gpio/gpio33 ] ; then
             echo -n "33" > /sys/class/gpio/export
         fi
-        echo -n "in" > /sys/class/gpio/gpio33/direction
+        echo -n "out" > /sys/class/gpio/gpio33/direction
+        echo -n "0" > /sys/class/gpio/gpio33/value
 
         # IO 01 gpio12 as input (DFLAG_1) --------------------------------------------------------
         # Linux: gpio12
@@ -56,7 +57,8 @@ case "$1" in
         if [ ! -d /sys/class/gpio/gpio29 ] ; then
             echo -n "29" > /sys/class/gpio/export
         fi
-        echo -n "in" > /sys/class/gpio/gpio29/direction
+        echo -n "out" > /sys/class/gpio/gpio29/direction
+        echo -n "0" > /sys/class/gpio/gpio29/value
 
         # Pin Mux 1: gpio45 (low)
         if [ ! -d /sys/class/gpio/gpio45 ] ; then
@@ -150,7 +152,8 @@ case "$1" in
         if [ ! -d /sys/class/gpio/gpio37 ] ; then
             echo -n "37" > /sys/class/gpio/export
         fi
-        echo -n "in" > /sys/class/gpio/gpio37/direction
+        echo -n "out" > /sys/class/gpio/gpio37/direction
+        echo -n "0" > /sys/class/gpio/gpio37/value
 
         # IO 05 gpio0 as input (ELB1) -----------------------------------------------------
         # Linux: gpio0
@@ -172,7 +175,8 @@ case "$1" in
         if [ ! -d /sys/class/gpio/gpio19 ] ; then
             echo -n "19" > /sys/class/gpio/export
         fi
-        echo -n "in" > /sys/class/gpio/gpio19/direction
+        echo -n "out" > /sys/class/gpio/gpio19/direction
+        echo -n "0" > /sys/class/gpio/gpio19/value
 
         # Pin Mux 1: gpio66 (low)
         if [ ! -d /sys/class/gpio/gpio66 ] ; then
@@ -200,7 +204,8 @@ case "$1" in
         if [ ! -d /sys/class/gpio/gpio21 ] ; then
             echo -n "21" > /sys/class/gpio/export
         fi
-        echo -n "in" > /sys/class/gpio/gpio21/direction
+        echo -n "out" > /sys/class/gpio/gpio21/direction
+        echo -n "0" > /sys/class/gpio/gpio21/value
 
         # Pin Mux 1: gpio68 (low)
         if [ ! -d /sys/class/gpio/gpio68 ] ; then

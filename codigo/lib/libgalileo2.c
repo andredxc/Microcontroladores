@@ -20,7 +20,7 @@ char* pgets(char* string, int size, const char* path){
     if(read(fd, string, size) < 0) {
         return NULL;
     }
-
+    close(path);
     return string;
 }
 
