@@ -1,24 +1,26 @@
-TARGET=../trab
-SRCS=main.c
+TARGET=api.a
+SRCS=api.c
 
-FLAGS=-O2 -Wall -g -MMD
-INCLUDE=-I../api
+FLAGS=-O2 -Wall -MMD -g
+INCLUDE=-I.
 LIBDIR=
-LIBS=../api/api.a
+LIBS=
 
 CC=$(CROSS_COMPILE)gcc
+CCAR=$(CROSS_COMPILE)ar
 CFLAGS=$(FLAGS) $(INCLUDE)
 LDFLAGS=$(LIBDIR) $(LIBS)
+CCARFLAGS=-crvs
 
 all: $(TARGET)
 
 $(TARGET): $(SRCS:.c=.o)
-	$(CC) -o $@ $^ $(LDFLAGS)
+	$(CCAR) $(CCARFLAGS) $@ $^
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c -o $@ $<
+	$(CC) $(CFLAGS) -c -o $@ $^
 
--include $(SRCS:.c=.d)
+-include $(SCRS:.c=.d)
 
 clean:
 	rm -f *~ *.bak *.o *.d
