@@ -300,13 +300,13 @@ Text Label 9800 3050 0    50   ~ 0
 ELB1
 $Comp
 L 74xx:74LS08 U2
-U 4 1 5C0D631F
+U 3 1 5C0D631F
 P 3900 3250
 F 0 "U2" H 3900 3575 50  0000 C CNN
 F 1 "74LS08" H 3900 3484 50  0000 C CNN
 F 2 "lib_footprint:DIP-14_W7.62mm_Socket" H 3900 3250 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 3900 3250 50  0001 C CNN
-	4    3900 3250
+	3    3900 3250
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -333,13 +333,13 @@ F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 3850 1850 50  0001 C CNN
 $EndComp
 $Comp
 L 74xx:74LS08 U2
-U 3 1 5C0D68CB
+U 4 1 5C0D68CB
 P 4500 2450
 F 0 "U2" H 4500 2775 50  0000 C CNN
 F 1 "74LS08" H 4500 2684 50  0000 C CNN
 F 2 "lib_footprint:DIP-14_W7.62mm_Socket" H 4500 2450 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 4500 2450 50  0001 C CNN
-	3    4500 2450
+	4    4500 2450
 	1    0    0    -1  
 $EndComp
 $Comp
