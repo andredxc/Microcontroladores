@@ -311,24 +311,24 @@ F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 3900 3250 50  0001 C CNN
 $EndComp
 $Comp
 L 74xx:74LS04 U1
-U 6 1 5C0D6561
+U 5 1 5C0D6561
 P 3900 2800
 F 0 "U1" H 3900 3117 50  0000 C CNN
 F 1 "74LS04" H 3900 3026 50  0000 C CNN
 F 2 "lib_footprint:DIP-14_W7.62mm_Socket" H 3900 2800 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 3900 2800 50  0001 C CNN
-	6    3900 2800
+	5    3900 2800
 	1    0    0    -1  
 $EndComp
 $Comp
 L 74xx:74LS04 U1
-U 5 1 5C0D662D
+U 6 1 5C0D662D
 P 3850 1850
 F 0 "U1" H 3850 2167 50  0000 C CNN
 F 1 "74LS04" H 3850 2076 50  0000 C CNN
 F 2 "lib_footprint:DIP-14_W7.62mm_Socket" H 3850 1850 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 3850 1850 50  0001 C CNN
-	5    3850 1850
+	6    3850 1850
 	1    0    0    -1  
 $EndComp
 $Comp
