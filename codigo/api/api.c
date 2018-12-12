@@ -59,6 +59,7 @@ int setMotorVoltage(double volts){
     }
 
     dutyCycle = (volts + 27) / 54;
+    writeGPIO(_fd.enable, 0);
     return setPWM(dutyCycle);
 }
 
@@ -266,6 +267,7 @@ int init_spi(){
 void finish(){
 
     writeGPIO(_fd.pwmEnable, 0);
+    writeGPIO(_fd.enable, 1);
     close(_fd.lflag);
     close(_fd.dflag);
     close(_fd.elb1);
@@ -393,6 +395,7 @@ int setPWM(double value){
     }
 
     writeGPIO(_fd.pwmEnable, 1);
+    writeGPIO(_fd.enable, 0);
 
     fprintf(stderr, "Dutycycle: %d\n", dutyCycle);
     return dutyCycle;

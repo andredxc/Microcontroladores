@@ -34,23 +34,19 @@
 
 int main(){
 
-    float motorVoltage;
     int done;
 
     if(init() < 0){
         fprintf(stderr, "%s - Couldn't initialize api\n", __FUNCTION__);
         return -1;
     }
+    
+    clear_counter();
 
     done = 0;
     while(!done){
 
-        fprintf(stderr, "Motor voltage: ");
-        scanf("%f", &motorVoltage);
-        if(setMotorVoltage(motorVoltage) < 0){
-            fprintf(stderr, "Error calling setMotorVoltage\n");
-            done = 1;
-        }
+        fprintf(stderr, "Current pos: %.2f\n", readEncoders());
     }
 
     finish();
