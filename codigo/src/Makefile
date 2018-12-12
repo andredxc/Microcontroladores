@@ -5,7 +5,7 @@ TARGET2=testVoltage
 SRC2=testVoltage.c
 
 FLAGS=-Wall -g -MMD
-INCLUDE=-I../api
+INCLUDE=-I../api -I../include
 LIBDIR=
 LIBS=../api/api.a
 

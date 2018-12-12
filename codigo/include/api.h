@@ -5,7 +5,7 @@
     Microcontroladores ENG10032
 
     André Dexheimer Carneiro 00243653
-    Camilla Stefani Schmidt
+    Camilla Stefani Schmidt 00237738
     Henrique Ecker Pchara 00213945
 
     This API provides basic controls over the Quanser 2DSFJE Robot
@@ -46,13 +46,26 @@
 #include <sys/types.h>
 #include <linux/spi/spidev.h>
 
+// IO 00 gpio11 as output(ENABLE)
+// IO 01 gpio12 as input (ELB2)
+// IO 02 gpio13 as input (ELB1)
+// IO 03 pwm1 as output (MOTOR)
+// IO 04 gpio6 as input(LFLAG_1)
+// IO 05 gpio0 as input (DFLAG_1)
+// IO 06 gpio1 as output (INDEX_1)
+// IO 07 gpio38 as output (EN_1)
+// IO 10 gpio10 as output (SS)
+// IO 11 (MOSI)
+// IO 12 (MISO)
+// IO 13 (SCK)
+
 // Input pins
-# define LFLAG "/sys/class/gpio/gpio11/value"
-# define DFLAG "/sys/class/gpio/gpio12/value"
-# define ELB1 "/sys/class/gpio/gpio0/value"
-# define ELB2 "/sys/class/gpio/gpio1/value"
+# define LFLAG "/sys/class/gpio/gpio6/value"
+# define DFLAG "/sys/class/gpio/gpio0/value"
+# define ELB1 "/sys/class/gpio/gpio13/value"
+# define ELB2 "/sys/class/gpio/gpio12/value"
 // Output pins
-# define INDEX "/sys/class/gpio/gpio13/value"
+# define INDEX "/sys/class/gpio/gpio1/value"
 # define EN "/sys/class/gpio/gpio6/value"
 # define ENABLE "/sys/class/gpio/gpio38/value"
 // PWM pin
