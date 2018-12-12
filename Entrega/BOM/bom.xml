@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>G:\GitHub\Micro\esquematico\trab.sch</source>
+    <date>11/12/2018 18:47:32</date>
+    <tool>Eeschema (5.0.0)</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>trab.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="Y1">
+      <value>30MHz</value>
+      <footprint>Crystal:Crystal_AT310_D3.0mm_L10.0mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Crystal" description="Two pin crystal"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5BC00BEE</tstamp>
+    </comp>
+    <comp ref="R2">
+      <value>1M</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5BC026B2</tstamp>
+    </comp>
+    <comp ref="C1">
+      <value>22pF</value>
+      <footprint>Capacitor_THT:C_Rect_L7.0mm_W2.0mm_P5.00mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5BC13B83</tstamp>
+    </comp>
+    <comp ref="C2">
+      <value>22pF</value>
+      <footprint>Capacitor_THT:C_Rect_L7.0mm_W2.0mm_P5.00mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5BC196FF</tstamp>
+    </comp>
+    <comp ref="U3">
+      <value>LS7366R</value>
+      <footprint>Package_DIP:DIP-14_W7.62mm_Socket</footprint>
+      <libsource lib="micros" part="LS7366R" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5BE9471B</tstamp>
+    </comp>
+    <comp ref="U5">
+      <value>end</value>
+      <footprint>Connector_Samtec_HLE_THT:Samtec_HLE-116-02-xx-DV-TE_2x08_P2.54mm_Horizontal</footprint>
+      <libsource lib="micros" part="end" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5BF0B2F5</tstamp>
+    </comp>
+    <comp ref="U2">
+      <value>74LS08</value>
+      <footprint>lib_footprint:DIP-14_W7.62mm_Socket</footprint>
+      <datasheet>http://www.ti.com/lit/gpn/sn74LS08</datasheet>
+      <libsource lib="74xx" part="74LS08" description="Quad And2"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C0D631F</tstamp>
+    </comp>
+    <comp ref="U1">
+      <value>74LS04</value>
+      <footprint>lib_footprint:DIP-14_W7.62mm_Socket</footprint>
+      <datasheet>http://www.ti.com/lit/gpn/sn74LS04</datasheet>
+      <libsource lib="74xx" part="74LS04" description="Hex Inverter"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C0D6561</tstamp>
+    </comp>
+    <comp ref="U8">
+      <value>GalileoGen2Shield</value>
+      <footprint>lib_footprint:galileo</footprint>
+      <libsource lib="micros" part="GalileoGen2Shield" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C1E0A89</tstamp>
+    </comp>
+    <comp ref="U7">
+      <value>MotorEncoder</value>
+      <footprint>lib_footprint:krex4</footprint>
+      <libsource lib="micros" part="MotorEncoder" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5BE9941A</tstamp>
+    </comp>
+    <comp ref="U4">
+      <value>L298N</value>
+      <libsource lib="micros" part="L298N" description="H bridge"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C10376C</tstamp>
+    </comp>
+    <comp ref="U6">
+      <value>MotorDrive</value>
+      <libsource lib="micros" part="MotorDrive" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C10AC06</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="74xx" part="74LS04">
+      <description>Hex Inverter</description>
+      <docs>http://www.ti.com/lit/gpn/sn74LS04</docs>
+      <footprints>
+        <fp>DIP?14*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">74LS04</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="input"/>
+        <pin num="2" name="~" type="output"/>
+        <pin num="3" name="~" type="input"/>
+        <pin num="4" name="~" type="output"/>
+        <pin num="5" name="~" type="input"/>
+        <pin num="6" name="~" type="output"/>
+        <pin num="7" name="GND" type="power_in"/>
+        <pin num="8" name="~" type="output"/>
+        <pin num="9" name="~" type="input"/>
+        <pin num="10" name="~" type="output"/>
+        <pin num="11" name="~" type="input"/>
+        <pin num="12" name="~" type="output"/>
+        <pin num="13" name="~" type="input"/>
+        <pin num="14" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="74xx" part="74LS08">
+      <aliases>
+        <alias>74LS09</alias>
+      </aliases>
+      <description>Quad And2</description>
+      <docs>http://www.ti.com/lit/gpn/sn74LS08</docs>
+      <footprints>
+        <fp>DIP?14*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">74LS08</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="input"/>
+        <pin num="2" name="~" type="input"/>
+        <pin num="3" name="~" type="output"/>
+        <pin num="4" name="~" type="input"/>
+        <pin num="5" name="~" type="input"/>
+        <pin num="6" name="~" type="output"/>
+        <pin num="7" name="GND" type="power_in"/>
+        <pin num="8" name="~" type="output"/>
+        <pin num="9" name="~" type="input"/>
+        <pin num="10" name="~" type="input"/>
+        <pin num="11" name="~" type="output"/>
+        <pin num="12" name="~" type="input"/>
+        <pin num="13" name="~" type="input"/>
+        <pin num="14" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="Crystal">
+      <description>Two pin crystal</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Crystal*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Y</field>
+        <field name="Value">Crystal</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="micros" part="GalileoGen2Shield">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">GalileoGen2Shield</field>
+      </fields>
+      <pins>
+        <pin num="1" name="PD0/D0/RX" type="BiDi"/>
+        <pin num="2" name="PD1/D1/TX" type="BiDi"/>
+        <pin num="3" name="PD2/D2/INT0" type="BiDi"/>
+        <pin num="4" name="PD3/D3/INT1/PWM" type="BiDi"/>
+        <pin num="5" name="PD4/D4" type="BiDi"/>
+        <pin num="6" name="PD5/D5/PWM" type="BiDi"/>
+        <pin num="7" name="PD6/D6/PWM" type="BiDi"/>
+        <pin num="8" name="PD7/D7" type="BiDi"/>
+        <pin num="11" name="PB2/D10/SS/PWM" type="BiDi"/>
+        <pin num="12" name="PB3/D11/MOSI/PWM" type="BiDi"/>
+        <pin num="13" name="PB4/D12/MISO" type="BiDi"/>
+        <pin num="14" name="PB5/D13/SCK" type="BiDi"/>
+        <pin num="27" name="GND" type="BiDi"/>
+        <pin num="28" name="5V" type="BiDi"/>
+      </pins>
+    </libpart>
+    <libpart lib="micros" part="L298N">
+      <description>H bridge</description>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">L298N</field>
+      </fields>
+      <pins>
+        <pin num="1" name="IN4~" type="input"/>
+        <pin num="2" name="IN3~" type="input"/>
+        <pin num="3" name="IN2~" type="input"/>
+        <pin num="4" name="IN1~" type="input"/>
+        <pin num="6" name="GND~" type="input"/>
+        <pin num="7" name="VDD" type="input"/>
+        <pin num="8" name="OUT2" type="output"/>
+        <pin num="9" name="OUT1" type="output"/>
+        <pin num="10" name="OUT4" type="output"/>
+        <pin num="11" name="OUT3" type="output"/>
+      </pins>
+    </libpart>
+    <libpart lib="micros" part="LS7366R">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">LS7366R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="fck0" type="output"/>
+        <pin num="2" name="fcki" type="input"/>
+        <pin num="3" name="Vss" type="input"/>
+        <pin num="4" name="SS/" type="input"/>
+        <pin num="5" name="SCK" type="input"/>
+        <pin num="6" name="MISO" type="output"/>
+        <pin num="7" name="MOSI" type="input"/>
+        <pin num="8" name="LFLAG/" type="output"/>
+        <pin num="9" name="DFLAG/" type="output"/>
+        <pin num="10" name="INDEX/" type="input"/>
+        <pin num="11" name="B" type="input"/>
+        <pin num="12" name="A" type="input"/>
+        <pin num="13" name="CNT_EN" type="input"/>
+        <pin num="14" name="Vdd" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="micros" part="MotorDrive">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">MotorDrive</field>
+      </fields>
+      <pins>
+        <pin num="1" name="+VM" type="input"/>
+        <pin num="2" name="-VM" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="micros" part="MotorEncoder">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">MotorEncoder</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="input"/>
+        <pin num="2" name="+VCC" type="input"/>
+        <pin num="3" name="CHA" type="output"/>
+        <pin num="4" name="CHB" type="output"/>
+      </pins>
+    </libpart>
+    <libpart lib="micros" part="end">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">end</field>
+      </fields>
+      <pins>
+        <pin num="5" name="GND" type="input"/>
+        <pin num="6" name="ELB1" type="output"/>
+        <pin num="8" name="ELB2" type="output"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="74xx">
+      <uri>C:\Program Files\KiCad\share\kicad\library/74xx.lib</uri>
+    </library>
+    <library logical="Device">
+      <uri>C:\Program Files\KiCad\share\kicad\library/Device.lib</uri>
+    </library>
+    <library logical="micros">
+      <uri>C:/Users/Andre/Desktop/Microcontroladores-master/trab/micros.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/ELB2">
+      <node ref="U8" pin="2"/>
+      <node ref="U5" pin="8"/>
+    </net>
+    <net code="2" name="/+5V">
+      <node ref="U1" pin="14"/>
+      <node ref="U8" pin="28"/>
+      <node ref="U2" pin="14"/>
+      <node ref="U7" pin="2"/>
+      <node ref="U3" pin="14"/>
+    </net>
+    <net code="3" name="/ELB1">
+      <node ref="U8" pin="3"/>
+      <node ref="U5" pin="6"/>
+    </net>
+    <net code="4" name="Net-(U1-Pad10)">
+      <node ref="U2" pin="10"/>
+      <node ref="U1" pin="10"/>
+    </net>
+    <net code="5" name="Net-(U2-Pad8)">
+      <node ref="U4" pin="1"/>
+      <node ref="U4" pin="3"/>
+      <node ref="U2" pin="8"/>
+    </net>
+    <net code="6" name="GND">
+      <node ref="C1" pin="2"/>
+      <node ref="C2" pin="2"/>
+      <node ref="U4" pin="6"/>
+      <node ref="U7" pin="1"/>
+      <node ref="U5" pin="5"/>
+      <node ref="U3" pin="3"/>
+      <node ref="U2" pin="7"/>
+      <node ref="U1" pin="7"/>
+      <node ref="U8" pin="27"/>
+    </net>
+    <net code="7" name="Net-(U4-Pad10)">
+      <node ref="U4" pin="10"/>
+      <node ref="U6" pin="2"/>
+      <node ref="U4" pin="8"/>
+    </net>
+    <net code="8" name="/MOTOR">
+      <node ref="U8" pin="4"/>
+      <node ref="U1" pin="11"/>
+      <node ref="U2" pin="12"/>
+    </net>
+    <net code="9" name="Net-(U1-Pad12)">
+      <node ref="U2" pin="9"/>
+      <node ref="U1" pin="12"/>
+      <node ref="U2" pin="13"/>
+    </net>
+    <net code="10" name="Net-(U4-Pad11)">
+      <node ref="U6" pin="1"/>
+      <node ref="U4" pin="11"/>
+      <node ref="U4" pin="9"/>
+    </net>
+    <net code="11" name="Net-(U2-Pad11)">
+      <node ref="U2" pin="11"/>
+      <node ref="U4" pin="2"/>
+      <node ref="U4" pin="4"/>
+    </net>
+    <net code="12" name="/+27V">
+      <node ref="U4" pin="7"/>
+    </net>
+    <net code="13" name="/DFLAG_1">
+      <node ref="U8" pin="6"/>
+      <node ref="U3" pin="9"/>
+    </net>
+    <net code="14" name="/EN_1">
+      <node ref="U8" pin="8"/>
+      <node ref="U3" pin="13"/>
+    </net>
+    <net code="15" name="/A_J1">
+      <node ref="U3" pin="12"/>
+      <node ref="U7" pin="3"/>
+    </net>
+    <net code="16" name="/B_J1">
+      <node ref="U3" pin="11"/>
+      <node ref="U7" pin="4"/>
+    </net>
+    <net code="17" name="/INDEX_1">
+      <node ref="U8" pin="7"/>
+      <node ref="U3" pin="10"/>
+    </net>
+    <net code="18" name="/LFLAG_1">
+      <node ref="U3" pin="8"/>
+      <node ref="U8" pin="5"/>
+    </net>
+    <net code="19" name="/MOSI">
+      <node ref="U8" pin="12"/>
+      <node ref="U3" pin="7"/>
+    </net>
+    <net code="20" name="/MISO">
+      <node ref="U8" pin="13"/>
+      <node ref="U3" pin="6"/>
+    </net>
+    <net code="21" name="/SCK">
+      <node ref="U3" pin="5"/>
+      <node ref="U8" pin="14"/>
+    </net>
+    <net code="22" name="/SS">
+      <node ref="U8" pin="11"/>
+      <node ref="U3" pin="4"/>
+    </net>
+    <net code="23" name="Net-(C2-Pad1)">
+      <node ref="U3" pin="2"/>
+      <node ref="R2" pin="1"/>
+      <node ref="Y1" pin="2"/>
+      <node ref="C2" pin="1"/>
+    </net>
+    <net code="24" name="Net-(C1-Pad1)">
+      <node ref="U3" pin="1"/>
+      <node ref="C1" pin="1"/>
+      <node ref="Y1" pin="1"/>
+      <node ref="R2" pin="2"/>
+    </net>
+    <net code="25" name="/ENABLE">
+      <node ref="U8" pin="1"/>
+      <node ref="U1" pin="13"/>
+    </net>
+  </nets>
+</export>

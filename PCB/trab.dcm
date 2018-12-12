@@ -1,0 +1,7 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP LS7366R
+D Decodificado de quadratura feito pelo André com base no datasheet do que temos
+$ENDCMP
+#
+#End Doc Library

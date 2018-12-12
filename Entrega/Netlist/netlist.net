@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source G:\GitHub\Micro\esquematico\trab.sch)
-    (date "11/12/2018 19:22:34")
+    (date "11/12/2018 18:49:42")
     (tool "Eeschema (5.0.0)")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
