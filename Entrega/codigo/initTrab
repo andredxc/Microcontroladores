@@ -1,0 +1,389 @@
+#! /bin/sh
+### BEGIN INIT INFO
+# Provides:          initTrab
+# Required-Start:
+# Should-Start:
+# Required-Stop:
+# Default-Start:     S
+# Default-Stop:
+# Short-Description:
+# Description:
+### END INIT INFO
+
+case "$1" in
+    start|restart|force-reload)
+
+
+        # IO 00 gpio11 as output(ENABLE) --------------------------------------------------------
+        # Linux: gpio11
+        if [ ! -d /sys/class/gpio/gpio11 ] ; then
+            echo -n "11" > /sys/class/gpio/export
+        fi
+        echo -n "out" > /sys/class/gpio/gpio11/direction
+        chgrp gpio /sys/class/gpio/gpio11/value
+        chmod g+rw /sys/class/gpio/gpio11/value
+
+        # Level shifter: gpio32 (in)
+        if [ ! -d /sys/class/gpio/gpio32 ] ; then
+            echo -n "32" > /sys/class/gpio/export
+        fi
+        echo -n "out" > /sys/class/gpio/gpio32/direction
+        echo -n "0" > /sys/class/gpio/gpio32/value
+
+        # Resistor: gpio33
+        if [ ! -d /sys/class/gpio/gpio33 ] ; then
+            echo -n "33" > /sys/class/gpio/export
+        fi
+        echo -n "in" > /sys/class/gpio/gpio33/direction
+
+        # IO 01 gpio12 as input (ELB2) --------------------------------------------------------
+        # Linux: gpio12
+        if [ ! -d /sys/class/gpio/gpio12 ] ; then
+            echo -n "12" > /sys/class/gpio/export
+        fi
+        echo -n "in" > /sys/class/gpio/gpio12/direction
+        chgrp gpio /sys/class/gpio/gpio12/value
+        chmod g+rw /sys/class/gpio/gpio12/value
+
+        # Level shifter: gpio28 (in)
+        if [ ! -d /sys/class/gpio/gpio28 ] ; then
+            echo -n "28" > /sys/class/gpio/export
+        fi
+        echo -n "in" > /sys/class/gpio/gpio28/direction
+        echo -n "1" > /sys/class/gpio/gpio28/value
+
+        # Resistor: gpio29
+        if [ ! -d /sys/class/gpio/gpio29 ] ; then
+            echo -n "29" > /sys/class/gpio/export
+        fi
+        echo -n "out" > /sys/class/gpio/gpio29/direction
+        echo -n "0" > /sys/class/gpio/gpio29/value
+
+        # Pin Mux 1: gpio45 (low)
+        if [ ! -d /sys/class/gpio/gpio45 ] ; then
+            echo -n "45" > /sys/class/gpio/export
+        fi
+        echo -n "0" > /sys/class/gpio/gpio45/value
+        echo -n "out" > /sys/class/gpio/gpio45/direction
+
+        # IO 02 gpio13 as input (ELB1) --------------------------------------------------------
+        # Linux: gpio13
+        if [ ! -d /sys/class/gpio/gpio13 ] ; then
+            echo -n "13" > /sys/class/gpio/export
+        fi
+        echo -n "in" > /sys/class/gpio/gpio13/direction
+        chgrp gpio /sys/class/gpio/gpio13/value
+        chmod g+rw /sys/class/gpio/gpio13/value
+
+        # Level shifter: gpio34 (out)
+        if [ ! -d /sys/class/gpio/gpio34 ] ; then
+            echo -n "34" > /sys/class/gpio/export
+        fi
+        echo -n "in" > /sys/class/gpio/gpio34/direction
+        echo -n "1" > /sys/class/gpio/gpio34/value
+
+        # Resistor: gpio35
+        if [ ! -d /sys/class/gpio/gpio35 ] ; then
+            echo -n "35" > /sys/class/gpio/export
+        fi
+        echo -n "out" > /sys/class/gpio/gpio35/direction
+        echo -n "0" > /sys/class/gpio/gpio35/value
+
+        # Pin Mux 1: gpio77 (low)
+        if [ ! -d /sys/class/gpio/gpio77 ] ; then
+            echo -n "77" > /sys/class/gpio/export
+        fi
+        echo -n "0" > /sys/class/gpio/gpio77/value
+
+        # IO 03 pwm1 as output (MOTOR) -----------------------------------------------------
+        # Linux: pwm1
+        if [ ! -d /sys/class/pwm/pwmchip0/pwm1 ] ; then
+            echo -n "1" > /sys/class/pwm/pwmchip0/export
+        fi
+        chgrp pwm /sys/class/pwm/pwmchip0/device/pwm_period
+        chgrp pwm /sys/class/pwm/pwmchip0/pwm1/enable
+        chgrp pwm /sys/class/pwm/pwmchip0/pwm1/duty_cycle
+        chmod g+rw /sys/class/pwm/pwmchip0/device/pwm_period
+        chmod g+rw /sys/class/pwm/pwmchip0/pwm1/enable
+        chmod g+rw /sys/class/pwm/pwmchip0/pwm1/duty_cycle
+
+        # Level Shifter: gpio16 = 0 = out
+        if [ ! -d /sys/class/gpio/gpio16 ] ; then
+            echo -n "16" > /sys/class/gpio/export
+        fi
+        echo -n "0" > /sys/class/gpio/gpio16/value
+        echo -n "out" > /sys/class/gpio/gpio16/direction
+
+        # Resistor: gpio17
+        if [ ! -d /sys/class/gpio/gpio17 ] ; then
+            echo -n "17" > /sys/class/gpio/export
+        fi
+        echo -n "in" > /sys/class/gpio/gpio17/direction
+
+        # Mux1: gpio76 = 0
+        if [ ! -d /sys/class/gpio/gpio76 ] ; then
+            echo -n "76" > /sys/class/gpio/export
+        fi
+        echo -n "0" > /sys/class/gpio/gpio76/value
+
+        # Mux2: gpio64 = 1
+        if [ ! -d /sys/class/gpio/gpio64 ] ; then
+            echo -n "64" > /sys/class/gpio/export
+        fi
+        echo -n "1" > /sys/class/gpio/gpio64/value
+
+        # IO 04 gpio6 as input(LFLAG_1) ------------------------------------------------------------
+        # Linux: gpio6
+        if [ ! -d /sys/class/gpio/gpio6 ] ; then
+            echo -n "6" > /sys/class/gpio/export
+        fi
+        echo -n "in" > /sys/class/gpio/gpio6/direction
+        chgrp gpio /sys/class/gpio/gpio6/value
+        chmod g+rw /sys/class/gpio/gpio6/value
+
+        # Level shifter: gpio36 (in)
+        if [ ! -d /sys/class/gpio/gpio36 ] ; then
+            echo -n "36" > /sys/class/gpio/export
+        fi
+        echo -n "in" > /sys/class/gpio/gpio36/direction
+        echo -n "1" > /sys/class/gpio/gpio36/value
+
+        # Resistor: gpio37
+        if [ ! -d /sys/class/gpio/gpio37 ] ; then
+            echo -n "37" > /sys/class/gpio/export
+        fi
+        echo -n "out" > /sys/class/gpio/gpio37/direction
+        echo -n "0" > /sys/class/gpio/gpio37/value
+
+        # IO 05 gpio0 as input (DFLAG_1) -----------------------------------------------------
+        # Linux: gpio0
+        if [ ! -d /sys/class/gpio/gpio0 ] ; then
+            echo -n "0" > /sys/class/gpio/export
+        fi
+        echo -n "in" > /sys/class/gpio/gpio0/direction
+        chgrp gpio /sys/class/gpio/gpio0/value
+        chmod g+rw /sys/class/gpio/gpio0/value
+
+        # Level shifter: gpio18 (in)
+        if [ ! -d /sys/class/gpio/gpio18 ] ; then
+            echo -n "18" > /sys/class/gpio/export
+        fi
+        echo -n "in" > /sys/class/gpio/gpio18/direction
+        echo -n "1" > /sys/class/gpio/gpio18/value
+
+        # Resistor: gpio19
+        if [ ! -d /sys/class/gpio/gpio19 ] ; then
+            echo -n "19" > /sys/class/gpio/export
+        fi
+        echo -n "out" > /sys/class/gpio/gpio19/direction
+        echo -n "0" > /sys/class/gpio/gpio19/value
+
+        # Pin Mux 1: gpio66 (low)
+        if [ ! -d /sys/class/gpio/gpio66 ] ; then
+            echo -n "66" > /sys/class/gpio/export
+        fi
+        echo -n "0" > /sys/class/gpio/gpio66/value
+
+        # IO 06 gpio1 as output (INDEX_1) -----------------------------------------------------
+        # Linux: gpio1
+        if [ ! -d /sys/class/gpio/gpio1 ] ; then
+            echo -n "1" > /sys/class/gpio/export
+        fi
+        echo -n "out" > /sys/class/gpio/gpio1/direction
+        chgrp gpio /sys/class/gpio/gpio1/value
+        chmod g+rw /sys/class/gpio/gpio1/value
+
+        # Level shifter: gpio20 (in)
+        if [ ! -d /sys/class/gpio/gpio20 ] ; then
+            echo -n "20" > /sys/class/gpio/export
+        fi
+        echo -n "out" > /sys/class/gpio/gpio20/direction
+        echo -n "0" > /sys/class/gpio/gpio20/value
+
+        # Resistor: gpio21
+        if [ ! -d /sys/class/gpio/gpio21 ] ; then
+            echo -n "21" > /sys/class/gpio/export
+        fi
+        echo -n "in" > /sys/class/gpio/gpio21/direction
+
+        # Pin Mux 1: gpio68 (low)
+        if [ ! -d /sys/class/gpio/gpio68 ] ; then
+            echo -n "68" > /sys/class/gpio/export
+        fi
+        echo -n "0" > /sys/class/gpio/gpio68/value
+
+        # IO 07 gpio38 as output (EN_1) --------------------------------------------------
+        # Linux: gpio38
+        if [ ! -d /sys/class/gpio/gpio38 ] ; then
+            echo -n "38" > /sys/class/gpio/export
+        fi
+        echo -n "out" > /sys/class/gpio/gpio38/direction
+        chgrp gpio /sys/class/gpio/gpio38/value
+        chmod g+rw /sys/class/gpio/gpio38/value
+
+        # Resistor: gpio39
+        if [ ! -d /sys/class/gpio/gpio39 ] ; then
+            echo -n "39" > /sys/class/gpio/export
+        fi
+        echo -n "in" > /sys/class/gpio/gpio39/direction
+
+        # IO 10 gpio10 as output (SS) ------------------------------------------------------
+        # Linux: gpio10 - nao precisa, gerado automaticamente
+
+        # Level shifter: gpio26 (out)
+        if [ ! -d /sys/class/gpio/gpio26 ] ; then
+            echo -n "26" > /sys/class/gpio/export
+        fi
+        echo -n "out" > /sys/class/gpio/gpio26/direction
+        echo -n "0" > /sys/class/gpio/gpio26/value
+
+        # Resistor: gpio27 (pullup)
+        if [ ! -d /sys/class/gpio/gpio27 ] ; then
+            echo -n "27" > /sys/class/gpio/export
+        fi
+        echo -n "out" > /sys/class/gpio/gpio27/direction
+        echo -n "1" > /sys/class/gpio/gpio27/value
+
+        # Pin Mux 1: gpio74 (low)
+        if [ ! -d /sys/class/gpio/gpio74 ] ; then
+            echo -n "74" > /sys/class/gpio/export
+        fi
+        echo -n "0" > /sys/class/gpio/gpio74/value
+
+        # IO 11 (MOSI) ---------------------------------------------------------------------
+        # Linux: gpio10 - nao precisa, gerado automaticamente
+
+        # Level shifter: gpio24 (out)
+        if [ ! -d /sys/class/gpio/gpio24 ] ; then
+            echo -n "24" > /sys/class/gpio/export
+        fi
+        echo -n "out" > /sys/class/gpio/gpio24/direction
+        echo -n "0" > /sys/class/gpio/gpio24/value
+
+        # Resistor: gpio25 (floating)
+        if [ ! -d /sys/class/gpio/gpio25 ] ; then
+            echo -n "25" > /sys/class/gpio/export
+        fi
+        echo -n "in" > /sys/class/gpio/gpio25/direction
+
+        # Pin Mux 1: gpio44 (high)
+        if [ ! -d /sys/class/gpio/gpio44 ] ; then
+            echo -n "44" > /sys/class/gpio/export
+        fi
+        echo -n "out" > /sys/class/gpio/gpio44/direction
+        echo -n "1" > /sys/class/gpio/gpio44/value
+
+        # Pin Mux 2: gpio72 (low)
+        if [ ! -d /sys/class/gpio/gpio72 ] ; then
+            echo -n "72" > /sys/class/gpio/export
+        fi
+        echo -n "0" > /sys/class/gpio/gpio72/value
+
+        # IO 12 (MISO) ---------------------------------------------------------------------
+        # Linux: nao precisa, gerado automaticamente
+
+        # Level shifter: gpio42 (in)
+        if [ ! -d /sys/class/gpio/gpio42 ] ; then
+            echo -n "42" > /sys/class/gpio/export
+        fi
+        echo -n "out" > /sys/class/gpio/gpio42/direction
+        echo -n "1" > /sys/class/gpio/gpio42/value
+
+        # Resistor: gpio43 (floating)
+        if [ ! -d /sys/class/gpio/gpio43 ] ; then
+            echo -n "43" > /sys/class/gpio/export
+        fi
+        echo -n "in" > /sys/class/gpio/gpio43/direction
+
+        # IO 13 (SCK) ----------------------------------------------------------------------
+        # Linux: nao precisa, gerado automaticamente
+
+        # Level shifter: gpio30 (out)
+        if [ ! -d /sys/class/gpio/gpio30 ] ; then
+            echo -n "30" > /sys/class/gpio/export
+        fi
+        echo -n "out" > /sys/class/gpio/gpio30/direction
+        echo -n "0" > /sys/class/gpio/gpio30/value
+
+        # Resistor: gpio31 (floating)
+        if [ ! -d /sys/class/gpio/gpio31 ] ; then
+            echo -n "31" > /sys/class/gpio/export
+        fi
+        echo -n "out" > /sys/class/gpio/gpio31/direction
+        echo -n "0" > /sys/class/gpio/gpio31/value
+
+        # Pin Mux 1: gpio46 (high)
+        if [ ! -d /sys/class/gpio/gpio46 ] ; then
+            echo -n "46" > /sys/class/gpio/export
+        fi
+        echo -n "out" > /sys/class/gpio/gpio46/direction
+        echo -n "1" > /sys/class/gpio/gpio46/value
+
+        chgrp spi /dev/spidev1.0
+        chmod g+rw /dev/spidev1.0
+    	;;
+    stop)
+        # IO 00
+        echo -n "11" > /sys/class/gpio/unexport
+        echo -n "32" > /sys/class/gpio/unexport
+        echo -n "33" > /sys/class/gpio/unexport
+        # IO 01
+        echo -n "12" > /sys/class/gpio/unexport
+        echo -n "28" > /sys/class/gpio/unexport
+        echo -n "29" > /sys/class/gpio/unexport
+        echo -n "45" > /sys/class/gpio/unexport
+        # IO 02
+        echo -n "13" > /sys/class/gpio/unexport
+        echo -n "34" > /sys/class/gpio/unexport
+        echo -n "35" > /sys/class/gpio/unexport
+        echo -n "77" > /sys/class/gpio/unexport
+        # IO 03
+        echo -n "1" > /sys/class/pwm/pwmchip0/unexport
+        echo -n "16" > /sys/class/gpio/unexport
+        echo -n "76" > /sys/class/gpio/unexport
+        echo -n "64" > /sys/class/gpio/unexport
+        # IO 04
+        echo -n "6" > /sys/class/gpio/unexport
+        echo -n "36" > /sys/class/gpio/unexport
+        echo -n "37" > /sys/class/gpio/unexport
+        # IO 05
+        echo -n "0" > /sys/class/gpio/unexport
+        echo -n "18" > /sys/class/gpio/unexport
+        echo -n "19" > /sys/class/gpio/unexport
+        echo -n "66" > /sys/class/gpio/unexport
+        # IO 06
+        echo -n "1" > /sys/class/gpio/unexport
+        echo -n "20" > /sys/class/gpio/unexport
+        echo -n "21" > /sys/class/gpio/unexport
+        echo -n "68" > /sys/class/gpio/unexport
+        # IO 07
+        echo -n "38" > /sys/class/gpio/unexport
+        echo -n "39" > /sys/class/gpio/unexport
+        # IO 10
+        echo -n "26" > /sys/class/gpio/unexport
+        echo -n "27" > /sys/class/gpio/unexport
+        echo -n "74" > /sys/class/gpio/unexport
+        # IO 11
+        echo -n "24" > /sys/class/gpio/unexport
+        echo -n "25" > /sys/class/gpio/unexport
+        echo -n "44" > /sys/class/gpio/unexport
+        echo -n "72" > /sys/class/gpio/unexport
+        # IO 12
+        echo -n "42" > /sys/class/gpio/unexport
+        echo -n "43" > /sys/class/gpio/unexport
+        # IO 13
+        echo -n "30" > /sys/class/gpio/unexport
+        echo -n "31" > /sys/class/gpio/unexport
+        echo -n "46" > /sys/class/gpio/unexport
+        ;;
+    status)
+    	ls -d /sys/class/gpio/gpio*
+        ;;
+    *)
+    	echo -n "Usage: $0 "
+    	echo "{start|stop|restart|force-reload|status}"
+    	exit 1
+    	;;
+esac
+
+exit 0
