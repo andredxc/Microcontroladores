@@ -1,13 +1,46 @@
+/*
+    Universidade Federal do Rio Grande do Sul
+    Escola de Engenharia
+    Departamento de Sistemas Elétricos de Automação e Energia
+    Microcontroladores ENG10032
+
+    André Dexheimer Carneiro 00243653
+    Camilla Stefani Schmidt 00237738
+    Henrique Ecker Pchara 00213945
+
+    This API provides basic controls over the Quanser 2DSFJE Robot
+
+    Copyright (c) 2018 André Dexheimer Carneiro, Camilla Stefani Schmidt and Henrique Ecker Pchara
+
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program; if not, write to the Free Software
+    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+
+    You can also obtain a copy of the GNU General Public License
+    at <http://www.gnu.org/licenses>.
+
+*/
+
 #include "api.h"
 
-// IO 00 gpio11 as input(LFLAG_1)
-// IO 01 gpio12 as input (DFLAG_1)
-// IO 02 gpio13 as output (INDEX_1)
+// IO 00 gpio11 as output(ENABLE)
+// IO 01 gpio12 as input (ELB2)
+// IO 02 gpio13 as input (ELB1)
 // IO 03 pwm1 as output (MOTOR)
-// IO 04 gpio6 as output(EN_1)
-// IO 05 gpio0 as input (ELB1)
-// IO 06 gpio1 as input (ELB2)
-// IO 07 gpio38 as output (ENABLE)
+// IO 04 gpio6 as input(LFLAG_1)
+// IO 05 gpio0 as input (DFLAG_1)
+// IO 06 gpio1 as output (INDEX_1)
+// IO 07 gpio38 as output (EN_1)
 // IO 10 gpio10 as output (SS)
 // IO 11 (MOSI)
 // IO 12 (MISO)

@@ -2,7 +2,7 @@ TARGET=api.a
 SRCS=api.c
 
 FLAGS=-O2 -Wall -MMD -g
-INCLUDE=-I.
+INCLUDE=-I../include
 LIBDIR=
 LIBS=
 
