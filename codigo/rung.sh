@@ -11,7 +11,7 @@ show_help () {
 }
 
 username="micros"
-galileo_name="gal"
+galileo_name="galileo17"
 
 if [ -z "$1" ]
 then

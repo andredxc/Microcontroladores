@@ -34,7 +34,6 @@
 
 int main(){
 
-    float motorVoltage;
     int done;
 
     if(init() < 0){
@@ -42,17 +41,18 @@ int main(){
         return -1;
     }
 
+	fprintf(stderr, "Waiting...\n");
+
     done = 0;
     while(!done){
 
-        fprintf(stderr, "Motor voltage: ");
-        scanf("%f", &motorVoltage);
-        if(setMotorVoltage(motorVoltage) < 0){
-            fprintf(stderr, "Error calling setMotorVoltage\n");
-            done = 1;
+        if(readElbow1()){
+            fprintf(stderr, "ELB1\n");
         }
 
-        fprintf(stderr, "Current pos: %.2f\n", readEncoders());
+        if(readElbow2()){
+            fprintf(stderr, "ELB2\n");
+        }
     }
 
     finish();

@@ -17,7 +17,7 @@ show_help () {
 
 flag_remove=0
 script_path=""
-galileo_name="gal"
+galileo_name="galileo17"
 basename=""
 show_g_dirs=0
 
